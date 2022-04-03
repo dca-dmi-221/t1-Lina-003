@@ -9,6 +9,6 @@ class Cancion {
         this.creaCancion.play()
     }
     pausaCancion() {
-        this.creaCancion.pause()
+        this.creaCancion.stop()
     }   
 }
