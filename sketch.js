@@ -68,7 +68,7 @@ function draw() {
       pantalla2.show();
     break;
 
-    case 3:
+    case 2:
       pantalla3.show();
     break;
   }
@@ -88,7 +88,7 @@ function mousePressed() {
     dangerIsPlaying = !dangerIsPlaying;
     }
 
-    if(dist(mouseX, mouseY, 888, 345) < 50 && !dangerIsPlaying) {
+    if(dist(mouseX, mouseY, 468, 275) < 20 && !dangerIsPlaying) {
     danger.pausaCancion();
 
     dangerIsPlaying = false;
@@ -103,7 +103,7 @@ function mousePressed() {
     wayUpIsPlaying = !wayUpIsPlaying;
     }
 
-    if(dist(mouseX, mouseY, 888, 551) < 50 && !wayUpIsPlaying) {
+    if(dist(mouseX, mouseY, 468, 367) < 20 && !wayUpIsPlaying) {
     wayUp.pausaCancion();
 
     wayUpIsPlaying = false;
@@ -118,7 +118,7 @@ function mousePressed() {
     invincibleIsPlaying = !invincibleIsPlaying;
     }
 
-    if(dist(mouseX, mouseY, 888, 551) < 50 && !invincibleIsPlaying) {
+    if(dist(mouseX, mouseY, 468, 460) < 20 && !invincibleIsPlaying) {
     invincible.pausaCancion();
 
     invincibleIsPlaying = false;
@@ -133,7 +133,7 @@ function mousePressed() {
     scaredIsPlaying = !scaredIsPlaying;
     }
 
-    if(dist(mouseX, mouseY, 888, 551) < 50 && !scaredIsPlaying) {
+    if(dist(mouseX, mouseY, 468, 550) < 20 && !scaredIsPlaying) {
     scared.pausaCancion();
 
     scaredIsPlaying = false;
@@ -141,6 +141,10 @@ function mousePressed() {
 
     if(dist(mouseX, mouseY, 1274, 398) < 50) {
     pantalla = 1;
+    }
+
+    if(dist(mouseX, mouseY, 48, 413) < 50) {
+      pantalla = 3;
     }
   
   break;
@@ -155,7 +159,7 @@ function mousePressed() {
       homeIsPlaying = !homeIsPlaying;
       }
   
-      if(dist(mouseX, mouseY, 888, 551) < 50 && !homeIsPlaying) {
+      if(dist(mouseX, mouseY, 468, 275) < 20 && !homeIsPlaying) {
       home.pausaCancion();
   
       homeIsPlaying = false;
@@ -170,7 +174,7 @@ function mousePressed() {
       elevateIsPlaying = !elevateIsPlaying;
       }
   
-      if(dist(mouseX, mouseY, 888, 551) < 50 && !elevateIsPlaying) {
+      if(dist(mouseX, mouseY, 468, 367) < 20 && !elevateIsPlaying) {
       elevate.pausaCancion();
   
       elevateIsPlaying = false;
@@ -185,7 +189,7 @@ function mousePressed() {
       familiaIsPlaying = !familiaIsPlaying;
       }
   
-      if(dist(mouseX, mouseY, 888, 551) < 50 && !familiaIsPlaying) {
+      if(dist(mouseX, mouseY, 468, 460) < 20 && !familiaIsPlaying) {
       familia.pausaCancion();
   
       familiaIsPlaying = false;
@@ -200,7 +204,7 @@ function mousePressed() {
       saveTheDayIsPlaying = !saveTheDayIsPlaying;
       }
   
-      if(dist(mouseX, mouseY, 888, 551) < 50 && !saveTheDayIsPlaying) {
+      if(dist(mouseX, mouseY, 468, 550) < 20 && !saveTheDayIsPlaying) {
       saveTheDay.pausaCancion();
   
       saveTheDayIsPlaying = false;
@@ -215,6 +219,87 @@ function mousePressed() {
       }
     
     break;
+
+    case 2:
+      if(dist(mouseX, mouseY, 310, 275) < 50) {
+        sunflower.playCancion();
+        memories.pausaCancion();
+        riot.pausaCancion();
+        hide.pausaCancion();
+    
+        sunflowerIsPlaying = !sunflowerIsPlaying;
+        }
+    
+        if(dist(mouseX, mouseY, 468, 275) < 20 && !sunflowerIsPlaying) {
+        sunflower.pausaCancion();
+    
+        sunflowerIsPlaying = false;
+        }
+    
+        if(dist(mouseX, mouseY, 310, 367) < 50) {
+        memories.playCancion();
+        sunflower.pausaCancion();
+        riot.pausaCancion();
+        hide.pausaCancion();
+    
+        memoriesIsPlaying = !memoriesIsPlaying;
+        }
+    
+        if(dist(mouseX, mouseY, 468, 367) < 20 && !memoriesIsPlaying) {
+        memories.pausaCancion();
+    
+        memoriesIsPlaying = false;
+        }
+    
+        if(dist(mouseX, mouseY, 310, 460) < 50) {
+        riot.playCancion();
+        sunflower.pausaCancion();
+        memories.pausaCancion();
+        hide.pausaCancion();
+    
+        riotIsPlaying = !riotIsPlaying;
+        }
+    
+        if(dist(mouseX, mouseY, 468, 460) < 20 && !riotIsPlaying) {
+        riotIsPlaying.pausaCancion();
+    
+        riotIsPlaying = false;
+        }
+    
+        if(dist(mouseX, mouseY, 310, 550) < 50) {
+        hide.playCancion();
+        sunflower.pausaCancion();
+        memories.pausaCancion();
+        riot.pausaCancion();
+    
+        hideIsPlaying = !hideIsPlaying;
+        }
+    
+        if(dist(mouseX, mouseY, 468, 550) < 20 && !hideIsPlaying) {
+        hideIsPlaying.pausaCancion();
+    
+        hideIsPlaying = false;
+        }
+  
+        if(dist(mouseX, mouseY, 48, 413) < 50) {
+        pantalla = 1;
+        }
+        
+        if(dist(mouseX, mouseY, 1274, 398) < 50) {
+        pantalla = 3;
+        }
+      break;
+
+      case 3:
+        if(dist(mouseX, mouseY, 48, 413) < 50) {
+          pantalla = 2;
+        }
+          
+        if(dist(mouseX, mouseY, 1274, 398) < 50) {
+          pantalla = 0;
+        }
+        break;
+
 
   }
 
