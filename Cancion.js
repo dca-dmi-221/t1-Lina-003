@@ -10,5 +10,14 @@ class Cancion {
     }
     pausaCancion() {
         this.creaCancion.stop()
-    }   
+    }
+    draw() {
+        fill(225);
+        textSize(27);
+        textFont('Verdana');
+        text(this.nombre, 765, 476);
+    }
+    n() {
+        
+    }
 }
