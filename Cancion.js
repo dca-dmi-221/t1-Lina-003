@@ -1,7 +1,8 @@
 class Cancion {
-    constructor({nombre, ubicacion}) {
+    constructor({nombre, ubicacion, duracion}) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
+        this.duracion = duracion;
 
         this.creaCancion = createAudio(ubicacion);
     }
@@ -17,7 +18,11 @@ class Cancion {
         textFont('Verdana');
         text(this.nombre, 765, 476);
     }
-    n() {
-        
+    pintarTiempo() {
+        fill(225);
+        textSize(17);
+        textFont('Verdana');
+        text(this.duracion, 1112, 514);
     }
+    
 }
